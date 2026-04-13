@@ -1,0 +1,69 @@
+/* Custom Animations and Overrides */
+
+@keyframes marquee {
+    0% { transform: translateX(100%); }
+    100% { transform: translateX(-100%); }
+}
+
+.animate-marquee {
+    display: inline-block;
+    animation: marquee 30s linear infinite;
+}
+
+#tickerContent:hover {
+    animation-play-state: paused;
+}
+
+/* Scrollbar Styling */
+::-webkit-scrollbar {
+    width: 6px;
+    height: 6px;
+}
+
+::-webkit-scrollbar-track {
+    background: #f1f1f1;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #00b7af;
+    border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #009b94;
+}
+
+/* Custom classes for transitions */
+.price-up {
+    color: #10b981;
+    animation: pulse-green 1s;
+}
+
+.price-down {
+    color: #ef4444;
+    animation: pulse-red 1s;
+}
+
+@keyframes pulse-green {
+    0% { background-color: rgba(16, 185, 129, 0); }
+    50% { background-color: rgba(16, 185, 129, 0.1); }
+    100% { background-color: rgba(16, 185, 129, 0); }
+}
+
+@keyframes pulse-red {
+    0% { background-color: rgba(239, 68, 68, 0); }
+    50% { background-color: rgba(239, 68, 68, 0.1); }
+    100% { background-color: rgba(239, 68, 68, 0); }
+}
+
+/* Grid layout refinements */
+.commodity-row:hover {
+    background-color: rgba(0, 183, 175, 0.03);
+    cursor: pointer;
+}
+
+/* Chart container responsive */
+#marketChart {
+    width: 100% !important;
+    height: 100% !important;
+}
